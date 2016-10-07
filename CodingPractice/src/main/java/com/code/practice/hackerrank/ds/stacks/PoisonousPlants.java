@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.code.practice.hackerrank;
+package com.code.practice.hackerrank.ds.stacks;
 
 import java.io.BufferedReader;
 import java.io.IOException;

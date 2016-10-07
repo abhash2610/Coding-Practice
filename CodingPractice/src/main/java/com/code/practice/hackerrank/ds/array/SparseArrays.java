@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.code.practice.hackerrank;
+package com.code.practice.hackerrank.ds.array;
 
 import java.util.Scanner;
 

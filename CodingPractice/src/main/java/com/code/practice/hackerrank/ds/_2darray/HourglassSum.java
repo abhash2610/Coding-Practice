@@ -1,9 +1,15 @@
-package com.code.practice.hackerrank;
+package com.code.practice.hackerrank.ds._2darray;
+
+/**
+ * https://www.hackerrank.com/challenges/java-2d-array
+ * @author Abhash Upadhyaya
+ *
+ */
 public class HourglassSum {
 
     public static void main(String[] args) {
     	
-    	/**
+    	/** https://www.hackerrank.com/challenges/java-2d-array
 			1	1	1	0	0	0
 			0*	1*	0*	0	0	0
 			1	1*	1	0	0	0
