@@ -1,7 +1,7 @@
 /**
  * 
  */
-package hackerrank;
+package com.code.practice.hackerrank;
 
 import java.util.Scanner;
 
