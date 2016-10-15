@@ -34,11 +34,11 @@ public class ReverseDoublyLinkedList {
 		printList(head);
 		System.out.println();
 
-		Node node = Reverse(head);
+		Node node = reverse(head);
 		printList(node);
 	}
 
-	private static Node Reverse(Node head) {
+	private static Node reverse(Node head) {
 
 		if (head == null)
 			return head;
@@ -47,7 +47,7 @@ public class ReverseDoublyLinkedList {
 			return head;
 		} else {
 
-			Node newHead = Reverse(head.next);
+			Node newHead = reverse(head.next);
 
 			head.next.next = head;
 
