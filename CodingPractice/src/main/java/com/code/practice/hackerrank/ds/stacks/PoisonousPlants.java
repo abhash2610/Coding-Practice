@@ -3,9 +3,7 @@
  */
 package com.code.practice.hackerrank.ds.stacks;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 import java.util.Stack;
 
 /**
@@ -24,6 +22,12 @@ import java.util.Stack;
  * The input consists of an integer . The next line consists of integers
  * describing the array where denotes the amount of pesticide in plant .
  * 
+ * Constraints
+   
+   1<=N<=100000
+   0<=P[i]<=10e9
+
+
  * 
  * Output Format
  * 
@@ -31,7 +35,8 @@ import java.util.Stack;
  * 
  * Sample Input
  * 
- * 7 6 5 8 4 7 10 9
+  7
+  6 5 8 4 7 10 9
  * 
  * Sample Output
  * 
@@ -59,25 +64,24 @@ import java.util.Stack;
  * 
  * After the 2nd day the plants stop dying.
  * 
- * @author abhash2610
+ * @author Abhash Upadhyaya
  */
 
 public class PoisonousPlants {
 
 	private static Stack<Integer> plantStack = new Stack<Integer>();
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) {
 
-		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-
-		Integer totalPlants = Integer.parseInt(input.readLine());
-		String pesticideAmt[] = input.readLine().split(" ");
-
-		for (Integer i = 0; i < totalPlants; i++) {
-			plantStack.push(Integer.parseInt(pesticideAmt[i]));
+		try(Scanner userInput = new Scanner(System.in)) {
+			Integer totalPlants = userInput.nextInt();
+	
+			for (Integer i = 0; i < totalPlants; i++) {
+				plantStack.push(userInput.nextInt());
+			}
+	
+			System.out.println(getDays(plantStack));
 		}
-
-		System.out.println(getDays(plantStack));
 	}
 
 	private static Integer getDays(Stack<Integer> stack) {
@@ -91,10 +95,9 @@ public class PoisonousPlants {
 			while (!stack.empty()) {
 				Integer top = stack.pop();
 
-				if (!stack.empty() && top > stack.peek()) {
+				if (!stack.empty() && top > stack.peek())
 					flag = true;
-					continue;
-				} else
+				else
 					temp.push(top);
 			}
 
