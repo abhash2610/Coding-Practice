@@ -16,7 +16,7 @@ import java.util.TreeSet;
  */
 public class AshtonAndString {
 
-	private static final Set<String> strPermutationSet = new TreeSet<String>();
+	private static Set<String> strPermutationSet = null;
 	
 	public static void main(String[] args) {
 
@@ -29,7 +29,7 @@ public class AshtonAndString {
 				String testString = userInput.next();
 				int kthCharPosition = userInput.nextInt() - 1; 
 				
-				strPermutationSet.clear();
+				strPermutationSet = new TreeSet<String>();
 //				permuteString(testString);
 				findAllSubstrings(testString);
 //				System.out.println(strPermutationSet);
